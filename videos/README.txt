@@ -1,0 +1,1 @@
+Add your hero background video here as 'hero.mp4' (1920x1080 or taller). Keep it short, muted, and loop-friendly for best performance.

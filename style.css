@@ -1,0 +1,245 @@
+
+:root {
+  --beige: #f6f2e9;
+  --green: #3a5a40;
+  --light-green: #a3b18a;
+  --charcoal: #2b2b2b;
+  --white: #ffffff;
+}
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+body {
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  background-color: var(--beige);
+  color: var(--charcoal);
+  line-height: 1.6;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+header {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  padding: 1rem 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+  backdrop-filter: blur(6px);
+}
+header h1 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.2rem;
+  margin: 0;
+  letter-spacing: 0.5px;
+}
+nav a {
+  margin-left: 1.5rem;
+  text-decoration: none;
+  color: var(--charcoal);
+  font-weight: 500;
+  transition: opacity 0.3s ease;
+  opacity: 0.9;
+}
+nav a:hover, nav a.active { opacity: 1; color: var(--green); }
+
+/* Fullscreen hero */
+.hero-wrap {
+  position: relative;
+  height: 100vh;
+  min-height: 560px;
+  width: 100%;
+  overflow: hidden;
+}
+.hero-video {
+  position: absolute;
+  top: 50%; left: 50%;
+  min-width: 100%; min-height: 100%;
+  width: auto; height: auto;
+  transform: translate(-50%, -50%);
+  filter: saturate(1.05) contrast(1.05) brightness(0.85);
+  object-fit: cover;
+}
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at center, rgba(0,0,0,0.15), rgba(0,0,0,0.45));
+}
+.hero-content {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: var(--white);
+  padding: 0 5%;
+}
+.badge {
+  position: absolute;
+  top: 88px; right: 5%;
+  background: rgba(246,242,233,0.9);
+  color: var(--charcoal);
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+.hero-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: clamp(36px, 6vw, 68px);
+  letter-spacing: 0.5px;
+  margin: 0 0 8px 0;
+  text-shadow: 0 8px 32px rgba(0,0,0,0.35);
+  opacity: 0;
+  transform: translateY(10px);
+  animation: heroUp 900ms ease forwards;
+}
+.hero-sub {
+  font-size: clamp(16px, 2.2vw, 22px);
+  opacity: 0.9;
+  margin: 0 0 22px 0;
+  opacity: 0;
+  transform: translateY(10px);
+  animation: heroUp 900ms 120ms ease forwards;
+}
+.hero-ctas {
+  display: flex; gap: 12px;
+  opacity: 0;
+  transform: translateY(10px);
+  animation: heroUp 900ms 220ms ease forwards;
+}
+.cta-btn {
+  background-color: var(--green);
+  color: var(--white);
+  padding: 0.85rem 1.5rem;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 600;
+  display: inline-block;
+  transition: transform 0.2s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+  border: none; cursor: pointer;
+  box-shadow: 0 6px 18px rgba(58,90,64,0.28);
+}
+.cta-btn:hover { transform: translateY(-1px) scale(1.03); background-color: var(--light-green); }
+.cta-btn.secondary { background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.25); }
+.scroll-indicator {
+  position: absolute; bottom: 24px; left: 50%; transform: translateX(-50%);
+  width: 28px; height: 44px; border: 2px solid rgba(255,255,255,0.8); border-radius: 20px;
+  opacity: 0.9;
+}
+.scroll-indicator::after {
+  content: "";
+  position: absolute; top: 8px; left: 50%; transform: translateX(-50%);
+  width: 6px; height: 6px; border-radius: 50%;
+  background: rgba(255,255,255,0.9);
+  animation: scrollDot 1.6s infinite ease-in-out;
+}
+@keyframes scrollDot {
+  0% { transform: translate(-50%,0); opacity: 1; }
+  80% { transform: translate(-50%, 14px); opacity: 0; }
+  100% { opacity: 0; }
+}
+@keyframes heroUp {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Generic sections */
+section { padding: 3rem 5%; }
+.section-title { color: var(--green); font-family: 'Poppins', sans-serif; }
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+.card {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease;
+}
+.card:hover { transform: translateY(-5px); }
+.card h3 { margin-top: 0; color: var(--green); }
+footer {
+  text-align: center;
+  padding: 2rem 5%;
+  font-size: 0.9rem;
+  background-color: var(--charcoal);
+  color: white;
+}
+
+/* Forms */
+form input, form textarea {
+  width: 100%;
+  max-width: 500px;
+  padding: 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-family: 'Inter', sans-serif;
+}
+form textarea { resize: vertical; }
+
+/* Offset content under fixed header */
+.page-start { padding-top: 84px; }
+/* Image-backed product cards */
+.card.product {
+  position: relative;
+  color: #fff;
+  min-height: 180px;
+  padding: 1.5rem;
+  border-radius: 12px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  box-shadow: 0 6px 16px rgba(0,0,0,.10);
+  overflow: hidden;
+}
+
+/* dark gradient so text is readable */
+.card.product::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 12px;
+  background: linear-gradient(180deg, rgba(0,0,0,.20), rgba(0,0,0,.55));
+  transition: opacity .25s ease;
+}
+
+/* lift + brighten on hover */
+.card.product:hover { transform: translateY(-6px) scale(1.01); }
+.card.product:hover::before { opacity: .85; }
+
+/* keep text above the overlay */
+.card.product > * { position: relative; z-index: 1; }
+.card.product h3 { color: #fff; margin: 0 0 .35rem; }
+.card.product p  { color: #fff; opacity: .95; }
+/* Hover zoom effect for product cards */
+.card.product {
+  transition: transform 0.3s ease;
+}
+
+.card.product::before {
+  transition: opacity 0.25s ease, transform 0.5s ease;
+}
+
+.card.product:hover {
+  transform: translateY(-6px) scale(1.02); /* slight lift */
+}
+
+.card.product:hover::before {
+  opacity: 0.75;
+}
+
+.card.product:hover {
+  background-size: 110%; /* zoom image */
+}
+.card.product {
+  background-size: cover;
+  background-position: center;
+  transition: background-size 0.6s ease, transform 0.3s ease;
+}

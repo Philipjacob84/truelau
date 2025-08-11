@@ -1,0 +1,1 @@
+Place your hero.mp4 video in this folder to replace the homepage background.

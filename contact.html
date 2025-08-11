@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact — TrueLau</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+  <header class="container header">
+    <div class="brand">TrueLau</div>
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="learn.html">Learn</a>
+      <a href="contact.html" class="active">Contact</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="section">
+      <h1>Contact Us</h1>
+      <p class="muted">We’d love to hear from you! Whether it’s an order, a question, or a collaboration idea, just drop us a message or use any of the contact options below.</p>
+
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:2rem;align-items:start;flex-wrap:wrap;">
+        
+        <!-- Contact Form -->
+        <div class="card">
+          <h3>Send us a message</h3>
+          <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" id="contact-form">
+            <input type="hidden" name="form-name" value="contact" />
+            <p class="hidden" style="display:none">
+              <label>Don’t fill this out: <input name="bot-field" /></label>
+            </p>
+
+            <div class="form-row" style="display: flex; gap: 1rem;">
+              <input type="text" name="name" placeholder="Your name" required />
+              <input type="email" name="email" placeholder="Your email" required />
+            </div>
+
+            <textarea name="message" rows="7" placeholder="Your message" required></textarea>
+
+            <label style="display:flex;gap:.5rem;align-items:center;margin:.5rem 0">
+              <input type="checkbox" name="consent" required />
+              <span>I agree to be contacted about my enquiry.</span>
+            </label>
+
+            <button type="submit">Send</button>
+
+            <p id="form-success" style="display:none;color:green;margin-top:.5rem;">Thanks! We received your message.</p>
+            <p id="form-error" style="display:none;color:#b00020;margin-top:.5rem;">Something went wrong. Please try again.</p>
+          </form>
+        </div>
+
+        <!-- Contact Details -->
+        <div>
+          <h3>Other ways to reach us</h3>
+          <p><strong>Email:</strong> <a href="mailto:hello@truelau.com">hello@truelau.com</a></p>
+          <p><strong>Instagram:</strong> <a href="https://instagram.com/true_lau" target="_blank">@true_lau</a></p>
+          <p><strong>Phone:</strong> <a href="tel:+919645072161">+91 96450 72161</a></p>
+          <p><strong>WhatsApp:</strong> <a href="https://wa.me/919645072161" target="_blank">Chat with us</a></p>
+          <p><strong>Location:</strong> Kanjirappally, Kerala, India</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <small>Instagram: <strong>@true_lau</strong> • Email: hello@truelau.com • Phone/WhatsApp: +91 96450 72161</small>
+    </div>
+  </footer>
+
+  <!-- JavaScript for instant send without reload -->
+  <script>
+    function encode(data) {
+      return Object.keys(data)
+        .map(k => encodeURIComponent(k) + "=" + encodeURIComponent(data[k]))
+        .join("&");
+    }
+    (function () {
+      const form = document.getElementById("contact-form");
+      const success = document.getElementById("form-success");
+      const error = document.getElementById("form-error");
+      if (form) {
+        form.addEventListener("submit", async (e) => {
+          e.preventDefault();
+          const formData = new FormData(form);
+          if (!formData.get("form-name"))
+            formData.set("form-name", "contact");
+          try {
+            await fetch("/", {
+              method: "POST",
+              headers: { "Content-Type": "application/x-www-form-urlencoded" },
+              body: encode(Object.fromEntries(formData)),
+            });
+            form.reset();
+            if (success) success.style.display = "block";
+            if (error) error.style.display = "none";
+          } catch (err) {
+            if (success) success.style.display = "none";
+            if (error) error.style.display = "block";
+          }
+        });
+      }
+    })();
+  </script>
+</body>
+</html>

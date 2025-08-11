@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Learn — TrueLau</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+  <script src="https://unpkg.com/scrollreveal"></script>
+  <style>
+    /* lightweight helpers just for this page */
+    .grid-two{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1rem}
+    .pill{display:inline-block;padding:.3rem .7rem;border-radius:999px;background:#f6f2e9;border:1px solid #e6e0d2;font-size:.85rem;margin:.25rem 0}
+    .muted{opacity:.9}
+    .checklist li{margin:.35rem 0}
+    details.sources{background:#fff;border:1px solid #eee;border-radius:12px;padding:1rem 1.25rem;margin-top:1.25rem;box-shadow:0 2px 10px rgba(0,0,0,.04)}
+    details.sources summary{cursor:pointer;font-weight:600;color:#3a5a40}
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>TrueLau</h1>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="products.html">Products</a>
+    <a href="learn.html" class="active">Learn</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+<div class="page-start"></div>
+
+<!-- Intro -->
+<section class="hero">
+  <h2 class="section-title">Discover the World of Microgreens</h2>
+  <p>Microgreens are tiny plants packed with powerful nutrients. Learn how they grow, why they matter, and how to enjoy them in your daily meals.</p>
+</section>
+
+<!-- SCIENCE-EDU UPGRADE -->
+<section>
+  <h2 class="section-title">What Are Microgreens?</h2>
+  <p><strong>Microgreens</strong> are young vegetable or herb seedlings harvested soon after germination—when the seed leaves (cotyledons) and usually the first true leaves appear. Most varieties are ready in <span class="pill">7–21 days</span>. They’re tender, intensely flavored, and naturally colorful.</p>
+
+<div class="card" id="nutrient-benefits">
+  <h3>Why They’re Nutritionally Special</h3>
+  <p class="muted">
+    Microgreens concentrate key micronutrients and bioactives <em>per gram</em> (variety-dependent) — including vitamins C/E/K₁, carotenoids (β-carotene, lutein, zeaxanthin), chlorophylls, and (in crucifers) glucosinolates like <em>glucoraphanin</em>.
+  </p>
+
+  <ul class="checklist">
+    <li><strong>Heart health:</strong> potassium, magnesium, and vitamin K help support healthy blood pressure and arterial function; red-cabbage microgreens show cholesterol-lowering and anti-inflammatory potential in animal models.</li>
+    <li><strong>Cancer risk (supportive):</strong> cruciferous microgreens (broccoli, radish, cabbage) provide glucosinolates → <em>sulforaphane</em>, studied for upregulating detox enzymes and protecting cellular DNA.</li>
+    <li><strong>Eye health:</strong> lutein + zeaxanthin (e.g., spinach, amaranth, pea shoots) support the macula and help filter high-energy blue light.</li>
+    <li><strong>Immune support:</strong> vitamin C (e.g., cilantro, red cabbage) and vitamin E act as antioxidants; diverse polyphenols help limit oxidative stress.</li>
+    <li><strong>Blood sugar:</strong> early human studies with broccoli microgreens suggest potential to improve fasting glucose; fiber and bioactives may aid glycemic control.</li>
+  </ul>
+
+  <p class="muted" style="font-size:.9rem">
+    Evidence spans lab/animal work to small human trials. Microgreens complement a balanced diet and medical care — they’re not a cure.
+  </p>
+
+  <!-- Optional: quick access to your References modal -->
+  <button class="pill" id="openRefs2" style="cursor:pointer">References</button>
+</div>
+
+<script>
+  // Hook this button to your existing References modal (if you added it earlier)
+  (function(){
+    var open2 = document.getElementById('openRefs2');
+    var modal = document.getElementById('refsModal');
+    if (open2 && modal) {
+      open2.addEventListener('click', function () {
+        modal.style.display = 'grid';
+        modal.setAttribute('aria-hidden', 'false');
+      });
+    }
+  })();
+</script>
+
+    </div>
+    <div class="card">
+      <h3>Sprouts vs. Microgreens</h3>
+      <ul class="checklist">
+        <li><strong>Sprouts:</strong> grown in water, usually in the dark; harvested in 2–5 days; you eat seed + root + shoot.</li>
+        <li><strong>Microgreens:</strong> grown on a medium (coco/soil/mats) with light; harvested in 7–21 days; you cut the shoot above the medium.</li>
+        <li>Different growing methods → different textures and nutrient profiles. Both are great; microgreens excel in color, flavor, and plate appeal.</li>
+      </ul>
+    </div>
+  </div>
+
+  
+</section>
+
+<!-- How We Grow -->
+<section>
+  <h2 class="section-title">How We Grow</h2>
+  <div class="cards">
+    <div class="card"><h3>1. Preparation</h3><p>Trays are filled with a clean, consistent medium (e.g., coco). Tools and surfaces are sanitized.</p></div>
+    <div class="card"><h3>2. Seeding</h3><p>Seeds are evenly spread for uniform density and airflow across the canopy.</p></div>
+    <div class="card"><h3>3. Blackout</h3><p>Short, dark “press” phase encourages strong rooting and even germination.</p></div>
+    <div class="card"><h3>4. Light & Air</h3><p>Trays are uncovered, provided with ample light and gentle airflow for sturdy, green growth.</p></div>
+    <div class="card"><h3>5. Harvest</h3><p>Cut just above the medium with sanitized tools; pack cold for maximum freshness.</p></div>
+  </div>
+</section>
+
+<!-- Safety + Home Tips -->
+<section>
+  <h2 class="section-title">Safety & Storage</h2>
+  <div class="grid-two">
+    <div class="card">
+      <h3>Our Hygiene Basics</h3>
+      <ul class="checklist">
+        <li>Trusted seed lots; clean water</li>
+        <li>Sanitized trays, tools, and surfaces</li>
+        <li>Good airflow + adequate light</li>
+        <li>Cold chain from harvest to handover</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>At Home</h3>
+      <ul class="checklist">
+        <li>Keep chilled, dry, and unwashed in clamshells</li>
+        <li>Wash just before eating</li>
+        <li>Enjoy within <strong>3–7 days</strong> for peak crunch, color, and aroma</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- How to Use -->
+<section>
+  <h2 class="section-title">How to Use Microgreens</h2>
+  <ul class="checklist">
+    <li>Finish hot dishes <em>after</em> cooking (retain texture & aroma)</li>
+    <li>Top salads, bowls, wraps, omelettes</li>
+    <li>Smoothies: a small handful boosts color & micronutrients</li>
+    <li>Try flavor profiles: <strong>sunflower</strong> (nutty), <strong>radish</strong> (peppery), <strong>pea shoots</strong> (sweet), <strong>broccoli</strong> (mild)</li>
+  </ul>
+</section>
+
+<footer>
+  <p>© 2025 TrueLau — From Phil's Farm. All rights reserved.</p>
+</footer>
+
+<script>
+  ScrollReveal().reveal('.card', {
+    distance: '50px',
+    duration: 800,
+    easing: 'ease-out',
+    origin: 'bottom',
+    interval: 100
+  });
+</script>
+
+</body>
+</html>

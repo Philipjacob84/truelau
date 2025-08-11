@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TrueLau — Small Leaves. Big Impact.</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://unpkg.com/scrollreveal"></script>
+</head>
+<body>
+
+<header>
+  <h1>TrueLau</h1>
+  <nav>
+    <a href="index.html" class="active">Home</a>
+    <a href="about.html">About</a>
+    <a href="products.html">Products</a>
+    <a href="learn.html">Learn</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+<!-- HERO -->
+<section class="hero-wrap">
+  <video class="hero-video"
+       autoplay
+       muted
+       loop
+       playsinline
+       webkit-playsinline
+       preload="metadata"
+       poster="images/hero_poster.svg">
+  <source src="videos/hero.mp4" type="video/mp4">
+</video>
+
+  <div class="hero-overlay"></div>
+  <div class="badge">POC Phase — Be part of our journey</div>
+  <div class="hero-content">
+    <h2 class="hero-title">TrueLau</h2>
+    <p class="hero-sub">Small Leaves. Big Impact. — From Phil’s Farm</p>
+    <div class="hero-ctas">
+      <a href="#products" class="cta-btn">Explore Our Greens</a>
+      <a href="learn.html" class="cta-btn secondary">Our Vision</a>
+    </div>
+  </div>
+  <div class="scroll-indicator"></div>
+</section>
+
+<div class="page-start"></div>
+
+<section id="poc">
+  <h2 class="section-title">POC Live</h2>
+  <p>Fenugreek + Green Peas — 1 tray each. Target: 50 g packs.</p>
+  <p>Contact: <a href="https://wa.me/919645072161" target="_blank">+91 96450 72161</a></p>
+</section>
+
+<section id="why">
+  <h2 class="section-title">Why Microgreens?</h2>
+  <div class="cards">
+    <div class="card"><h3>Nutrition-dense</h3><p>Up to 40x more nutrients compared to mature leaves per gram.</p></div>
+    <div class="card"><h3>Water-efficient</h3><p>Grown with far less water than traditional crops.</p></div>
+    <div class="card"><h3>Fast turnaround</h3><p>Ready in 7–14 days — perfect for small-batch freshness.</p></div>
+  </div>
+</section>
+
+<section id="products">
+  <h2 class="section-title">Six Microgreen Stars</h2>
+<div class="cards">
+  <div class="card product" style="background-image:url('images/sunflower.jpg');">
+    <h3>Sunflower</h3>
+    <p>Crunchy, nutty, and full of vitamin E — perfect for salads and wraps.</p>
+  </div>
+
+  <div class="card product" style="background-image:url('images/radish.jpg');">
+    <h3>Radish</h3>
+    <p>Spicy kick with vitamin C and antioxidants — vibrant in any dish.</p>
+  </div>
+
+  <div class="card product" style="background-image:url('images/pea-shoots.jpg');">
+    <h3>Pea Shoots</h3>
+    <p>Sweet, tender greens rich in plant protein and folate.</p>
+  </div>
+
+  <div class="card product" style="background-image:url('images/fenugreek.jpg');">
+    <h3>Fenugreek</h3>
+    <p>Fragrant leaves with digestive health benefits and iron.</p>
+  </div>
+
+  <div class="card product" style="background-image:url('images/broccoli.jpg');">
+    <h3>Broccoli</h3>
+    <p>Mild taste, rich in sulforaphane and antioxidants.</p>
+  </div>
+
+  <div class="card product" style="background-image:url('images/mustard.jpg');">
+    <h3>Mustard</h3>
+    <p>Bold flavor with metabolism-boosting compounds.</p>
+  </div>
+</div>
+
+</section>
+
+<footer>
+  <p>© 2025 TrueLau — From Phil's Farm. All rights reserved.</p>
+</footer>
+
+<script>
+  // ScrollReveal
+  ScrollReveal().reveal('.card', { distance: '50px', duration: 800, easing: 'ease-out', origin: 'bottom', interval: 100 });
+</script>
+
+</body>
+</html>

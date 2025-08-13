@@ -243,73 +243,21 @@ form textarea { resize: vertical; }
   background-position: center;
   transition: background-size 0.6s ease, transform 0.3s ease;
 }
-/* ===== TrueLau Contact – inherits your global styles ===== */
-:root{
-  --tl-bg: #0f0f0f;         /* page bg (already on your site) */
-  --tl-card:#141414;        /* card bg */
-  --tl-border:#202020;      /* subtle border */
-  --tl-text:#eaeaea;        /* main text */
-  --tl-muted:#a4a4a4;       /* secondary text */
-  --tl-accent:#b9f497;      /* TrueLau soft green */
-  --tl-radius: 16px;        /* rounded look to match site */
+/* Make header nav links white */
+header nav a {
+  color: #ffffff; /* White text */
+  text-decoration: none;
+  font-weight: 500;
+  padding: 8px 14px;
 }
 
-.tl-contact{ padding: clamp(40px, 8vw, 72px) 20px; background: transparent; color: var(--tl-text); }
-.tl-wrap{ max-width: 860px; margin: 0 auto; }
-.tl-head h2{ font-size: clamp(28px, 4vw, 36px); margin: 0 0 6px; }
-.tl-head p{ margin: 0 0 22px; color: var(--tl-muted); }
-
-.tl-card{
-  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0)) , var(--tl-card);
-  border: 1px solid var(--tl-border);
-  border-radius: var(--tl-radius);
-  padding: clamp(18px, 3vw, 28px);
-  box-shadow: 0 10px 30px rgba(0,0,0,.25);
-  backdrop-filter: saturate(130%) blur(4px);
+/* Hover effect */
+header nav a:hover {
+  color: #b9f497; /* Your light green accent on hover */
 }
 
-.tl-row{ display: grid; grid-template-columns: 1fr; gap: 14px; }
-@media (min-width: 720px){ .tl-row{ grid-template-columns: 1fr 1fr; } }
-
-.tl-field label{ display:block; font-weight:600; margin: 10px 0 6px; }
-.tl-field input,
-.tl-field textarea{
-  width: 100%;
-  padding: 14px 12px;
-  border-radius: 12px;
-  border: 1px solid var(--tl-border);
-  background: #0c0c0c;
-  color: var(--tl-text);
-  outline: none;
-  transition: border-color .2s, box-shadow .2s, transform .02s;
+/* Active link (current page) */
+header nav a.active {
+  color: #b9f497; /* Keep active page highlighted in light green */
+  font-weight: 600;
 }
-.tl-field input:focus,
-.tl-field textarea:focus{
-  border-color: #2b2b2b;
-  box-shadow: 0 0 0 3px rgba(185,244,151,.12);
-}
-
-.tl-btn{
-  margin-top: 12px;
-  width: 100%;
-  padding: 14px 16px;
-  font-weight: 700;
-  border: 0;
-  border-radius: 14px;
-  background: var(--tl-accent);
-  color: #0b0b0b;
-  cursor: pointer;
-  transition: transform .06s ease, filter .2s;
-}
-.tl-btn:hover{ filter: brightness(.96); }
-.tl-btn:active{ transform: translateY(1px); }
-
-.tl-meta{
-  margin-top: 14px;
-  text-align: center;
-  color: var(--tl-muted);
-  display: flex; gap: 10px; justify-content: center; align-items:center;
-  flex-wrap: wrap;
-}
-.tl-link{ color: var(--tl-accent); text-decoration: none; font-weight: 600; }
-.tl-hide{ display:none !important; }

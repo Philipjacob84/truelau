@@ -8,13 +8,23 @@
   <!-- Same fonts + CSS as index -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
+
+  <!-- Icons (Font Awesome) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
   <script src="https://unpkg.com/scrollreveal"></script>
 
-  <!-- Minimal, safe additions (won’t override your global look) -->
+  <!-- Minimal page-local tweaks -->
   <style>
+    :root{
+      --accent-dark:#1b5e20; /* your dark green */
+    }
+
     .contact-wrap { padding: clamp(40px, 8vw, 80px) 20px; }
     .contact-grid { max-width: 980px; margin: 0 auto; }
     .contact-card.card { padding: clamp(18px, 3vw, 28px); }
+
+    /* Inputs */
     .contact-form label { display:block; margin: 12px 0 6px; font-weight: 600; }
     .contact-form input,
     .contact-form textarea {
@@ -29,33 +39,34 @@
     .contact-form input:focus,
     .contact-form textarea:focus {
       border-color: rgba(255,255,255,.18);
-      box-shadow: 0 0 0 3px rgba(185,244,151,.12);
+      box-shadow: 0 0 0 3px rgba(27,94,32,.35); /* dark green glow */
     }
+
+    /* Buttons & links (dark green) */
     .contact-actions { margin-top: 14px; display: grid; gap: 10px; grid-template-columns: 1fr; }
     .btn-primary {
       display: inline-block; text-align: center; font-weight: 700; border: 0;
-      padding: 14px 16px; border-radius: 14px; background: #388e3c; color: #0b0b0b; cursor: pointer;
+      padding: 14px 16px; border-radius: 14px; background: var(--accent-dark); color: #fff; cursor: pointer;
     }
-    .contact-meta { margin-top: 12px; opacity: .8; font-size: .95rem; }
-    .contact-links a { color: #388e3c; text-decoration: none; font-weight: 600; }
-    .hidden { display:none !important; }
+    .btn-primary:hover { filter: brightness(.96); }
+
+    .contact-links a,
+    .contact-meta a,
+    .contact-card a { color: var(--accent-dark); text-decoration: none; font-weight: 600; }
+    .contact-links a:hover,
+    .contact-meta a:hover,
+    .contact-card a:hover { text-decoration: underline; }
+
+    /* Icon alignment */
+    .contact-links .link-row { display:flex; align-items:center; gap:10px; margin:10px 0; }
+    .contact-links .link-row i { color: var(--accent-dark); width:20px; text-align:center; }
+
+    /* Two-column on desktop */
     @media (min-width: 860px) {
       .contact-cols { display: grid; grid-template-columns: 1.1fr .9fr; gap: 24px; align-items: start; }
     }
-    /* Make all links in the contact page dark green by default */
-.contact-page a,
-.contact-wrap a {
-  color: #1b5e20; /* your dark green */
-  text-decoration: none;
-  font-weight: 600;
-}
 
-/* Optional hover effect */
-.contact-page a:hover,
-.contact-wrap a:hover {
-  text-decoration: underline;
-}
-
+    .hidden { display:none !important; }
   </style>
 </head>
 <body>
@@ -78,7 +89,7 @@
       <p>Questions, orders, collabs — drop us a note. We’ll reply within 24 hours.</p>
 
       <div class="contact-cols">
-        <!-- Form card (reuses your .card aesthetic) -->
+        <!-- FORM -->
         <div class="card contact-card">
           <form
             class="contact-form"
@@ -87,6 +98,7 @@
             data-netlify="true"
             netlify-honeypot="bot-field"
             action="/thanks.html">
+
             <!-- Netlify required hidden field -->
             <input type="hidden" name="form-name" value="contact" />
             <!-- Honeypot -->
@@ -112,24 +124,39 @@
             <textarea id="message" name="message" rows="6" required placeholder="Tell us what you need…"></textarea>
 
             <div class="contact-actions">
-              <button type="submit" class="btn-primary">Send message</button>
+              <button type="submit" class="btn-primary">
+                <i class="fa-solid fa-paper-plane" style="margin-right:8px;"></i> Send message
+              </button>
               <div class="contact-meta">
-                Prefer WhatsApp? <span class="contact-links"><a href="https://wa.me/919645072161" target="_blank" rel="noopener">+91 96450 72161</a></span>
+                Prefer WhatsApp? <a href="https://wa.me/919645072161" target="_blank" rel="noopener">
+                  <i class="fa-brands fa-whatsapp" style="margin-right:6px;"></i>+91 96450 72161
+                </a>
               </div>
             </div>
           </form>
         </div>
 
-        <!-- Info card / quick links -->
+        <!-- INFO / QUICK LINKS WITH ICONS -->
         <div class="card contact-card">
           <h3>Quick Links</h3>
-          <p class="contact-links">
-            <a href="mailto:truelauofficial@gmail.com">truelauofficial@gmail.com</a><br/>
-            <a href="https://instagram.com/true_lau" target="_blank" rel="noopener">@true_lau</a><br/>
-            <a href="https://wa.me/919645072161" target="_blank" rel="noopener">WhatsApp Us</a>
-          </p>
+          <div class="contact-links">
+            <div class="link-row">
+              <i class="fa-solid fa-envelope"></i>
+              <a href="mailto:truelauofficial@gmail.com">truelauofficial@gmail.com</a>
+            </div>
+            <div class="link-row">
+              <i class="fa-brands fa-whatsapp"></i>
+              <a href="https://wa.me/919645072161" target="_blank" rel="noopener">+91 96450 72161</a>
+            </div>
+            <div class="link-row">
+              <i class="fa-brands fa-instagram"></i>
+              <a href="https://instagram.com/true_lau" target="_blank" rel="noopener">@true_lau</a>
+            </div>
+          </div>
+
           <h3 style="margin-top:18px;">Hours</h3>
           <p>Mon–Sat: 9:00–18:00 IST<br/>Sun: Closed</p>
+
           <h3 style="margin-top:18px;">Location</h3>
           <p>Kanjirappally, Kerala — Fresh local drops weekly.</p>
         </div>
@@ -143,10 +170,8 @@
 </footer>
 
 <script>
-  // Subtle reveals to match the rest of the site
   ScrollReveal().reveal('.contact-card', { distance: '40px', duration: 800, easing:'ease-out', origin:'bottom', interval: 120 });
 </script>
 
 </body>
 </html>
-  

@@ -42,6 +42,20 @@
     @media (min-width: 860px) {
       .contact-cols { display: grid; grid-template-columns: 1.1fr .9fr; gap: 24px; align-items: start; }
     }
+    /* Make all links in the contact page dark green by default */
+.contact-page a,
+.contact-wrap a {
+  color: #1b5e20; /* your dark green */
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* Optional hover effect */
+.contact-page a:hover,
+.contact-wrap a:hover {
+  text-decoration: underline;
+}
+
   </style>
 </head>
 <body>

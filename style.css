@@ -260,4 +260,30 @@ header nav a:hover {
 header nav a.active {
   color: #b9f497; /* Keep active page highlighted in light green */
   font-weight: 600;
+}.card.product {
+  background-size: cover;
+  background-position: center;
+  border-radius: 12px;
+  height: 200px;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+  position: relative;
+}
+
+.card.product .overlay {
+  background: rgba(0, 0, 0, 0.45); /* Dark overlay for readability */
+  color: #fff;
+  padding: 15px;
+  width: 100%;
+}
+
+.card.product h3 {
+  margin: 0 0 5px;
+  font-size: 1.2rem;
+}
+
+.card.product p {
+  font-size: 0.9rem;
+  line-height: 1.4;
 }

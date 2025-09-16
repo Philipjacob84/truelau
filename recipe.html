@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Recipe — TrueLau</title>
+  <link rel="stylesheet" href="assets/styles.css"/>
+</head>
+<body>
+  
+<header>
+  <nav class="nav">
+    <a href="index.html"><img src="assets/logo.svg" alt="TrueLau logo"/></a>
+    <a href="index.html">Home</a>
+    <a href="recipes.html">All Recipes</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+  <div class="recipe-header">
+    <div class="container">
+      <a class="button" href="recipes.html">← Back to all recipes</a>
+      <h1 id="title"></h1>
+      <div class="recipe-meta">
+        <span class="meta" id="metaVarieties"></span>
+        <span class="meta" id="metaMeal"></span>
+        <span class="meta" id="metaDiet"></span>
+        <span class="meta" id="metaTime"></span>
+        <span class="meta" id="metaServes"></span>
+      </div>
+    </div>
+  </div>
+  <div class="recipe-content">
+    <img id="image" alt="" style="width:100%; border-radius:16px; border:1px solid #eee;"/>
+    <section>
+      <h2>Ingredients</h2>
+      <ul id="ingredients"></ul>
+    </section>
+    <section>
+      <h2>Instructions</h2>
+      <ol class="instructions" id="steps"></ol>
+    </section>
+    <section class="small" id="notes"></section>
+    <hr class="soft"/>
+    <div>
+      <a class="button" id="printBtn" href="#">Print</a>
+      <a class="button" id="shareBtn" href="#">Copy Link</a>
+    </div>
+  </div>
+  
+<footer>
+  <div class="footer-inner">
+    <div class="small">© 2025 TrueLau — From Phil’s Farm.</div>
+    <div class="small">Grown fresh in Kanjirappally. Scan the QR on your pack for the latest recipes.</div>
+  </div>
+</footer>
+
+  <script src="assets/script.js"></script>
+  <script>initRecipePage();</script>
+</body>
+</html>

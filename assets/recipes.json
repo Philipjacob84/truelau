@@ -1,0 +1,136 @@
+[
+  {
+    "id": "radish-egg-boost-omelette",
+    "title": "Radish Microgreens Boost Omelette",
+    "varieties": [
+      "Radish"
+    ],
+    "meal": "Breakfast",
+    "diet": [
+      "High-Protein",
+      "Vegetarian"
+    ],
+    "time": "10 min",
+    "serves": "1",
+    "image": "placeholder_radish.jpg",
+    "ingredients": [
+      "2 eggs",
+      "1/2 cup TrueLau radish microgreens (about 25g)",
+      "1 tbsp chopped onion (optional)",
+      "Pinch of salt & pepper",
+      "1 tsp oil or ghee"
+    ],
+    "steps": [
+      "Beat eggs with salt and pepper. Fold in half the microgreens.",
+      "Pour into a hot pan with oil; cook 1\u20132 min.",
+      "Add remaining microgreens on top, fold and serve."
+    ],
+    "notes": "Great post-workout breakfast with spice kick from radish greens."
+  },
+  {
+    "id": "pak-choi-green-smoothie",
+    "title": "Pak Choi Power Smoothie",
+    "varieties": [
+      "Pak Choi"
+    ],
+    "meal": "Drink",
+    "diet": [
+      "Vegan",
+      "Gluten-Free"
+    ],
+    "time": "5 min",
+    "serves": "1",
+    "image": "placeholder_pakchoi.jpg",
+    "ingredients": [
+      "1 banana (ripe)",
+      "1/2 cup TrueLau pak choi microgreens (about 25g)",
+      "6\u20138 ice cubes",
+      "200 ml chilled water or milk of choice",
+      "Honey or dates to taste (optional)"
+    ],
+    "steps": [
+      "Blend all ingredients until silky.",
+      "Taste and adjust sweetness. Serve immediately."
+    ],
+    "notes": "Clean, fresh flavour; pairs well with citrus."
+  },
+  {
+    "id": "beetroot-crunch-salad",
+    "title": "Beetroot Microgreens Crunch Salad",
+    "varieties": [
+      "Beetroot"
+    ],
+    "meal": "Lunch",
+    "diet": [
+      "Vegan",
+      "Gluten-Free"
+    ],
+    "time": "12 min",
+    "serves": "2",
+    "image": "placeholder_beetroot.jpg",
+    "ingredients": [
+      "2 cups cucumber & tomato chunks",
+      "1 cup TrueLau beetroot microgreens (about 2\u00d725g)",
+      "2 tsp lemon juice",
+      "1 tbsp extra virgin olive oil",
+      "Salt & pepper"
+    ],
+    "steps": [
+      "Toss veggies with lemon, oil, salt, and pepper.",
+      "Fold in beetroot microgreens just before serving for colour and crunch."
+    ],
+    "notes": "Vibrant colour; great as a side."
+  },
+  {
+    "id": "amaranth-curd-bowl",
+    "title": "Amaranth Microgreens Curd Bowl",
+    "varieties": [
+      "Amaranth"
+    ],
+    "meal": "Snack",
+    "diet": [
+      "Vegetarian",
+      "Gluten-Free"
+    ],
+    "time": "7 min",
+    "serves": "1",
+    "image": "placeholder_amaranth.jpg",
+    "ingredients": [
+      "1 cup thick curd (yogurt)",
+      "1/2 cup TrueLau amaranth microgreens (about 25g)",
+      "Roasted peanuts or seeds",
+      "Salt & chilli flakes to taste"
+    ],
+    "steps": [
+      "Whisk curd with salt. Top with microgreens and peanuts.",
+      "Finish with chilli flakes. Serve chilled."
+    ],
+    "notes": "Cooling snack with protein and crunch."
+  },
+  {
+    "id": "mustard-sandwich-kick",
+    "title": "Mustard Microgreens Sandwich Kick",
+    "varieties": [
+      "Mustard"
+    ],
+    "meal": "Snack",
+    "diet": [
+      "Vegetarian"
+    ],
+    "time": "8 min",
+    "serves": "1",
+    "image": "placeholder_mustard.jpg",
+    "ingredients": [
+      "2 slices whole-grain bread",
+      "1/2 cup TrueLau mustard microgreens (about 25g)",
+      "2 slices tomato & cucumber",
+      "1 tbsp hung curd or hummus",
+      "Salt & pepper"
+    ],
+    "steps": [
+      "Spread curd/hummus on bread.",
+      "Layer tomato, cucumber, and microgreens. Season and serve."
+    ],
+    "notes": "Peppery bite; perfect with soup or coffee."
+  }
+]

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>All Recipes — TrueLau</title>
+  <link rel="stylesheet" href="assets/styles.css"/>
+</head>
+<body>
+  
+<header>
+  <nav class="nav">
+    <a href="index.html"><img src="assets/logo.svg" alt="TrueLau logo"/></a>
+    <a href="index.html">Home</a>
+    <a href="recipes.html">All Recipes</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+  <div class="container">
+    <h1>All Recipes</h1>
+    <div class="searchbar">
+      <input type="search" id="search" placeholder="Search by name or ingredient..."/>
+      <select id="variety">
+        <option value="">All Varieties</option>
+        <option>Radish</option><option>Pak Choi</option><option>Beetroot</option><option>Amaranth</option><option>Mustard</option>
+      </select>
+      <select id="meal">
+        <option value="">Any Meal</option>
+        <option>Breakfast</option><option>Snack</option><option>Lunch</option><option>Drink</option>
+      </select>
+      <button class="primary" id="apply">Search</button>
+    </div>
+    <div id="list" class="grid"></div>
+  </div>
+  
+<footer>
+  <div class="footer-inner">
+    <div class="small">© 2025 TrueLau — From Phil’s Farm.</div>
+    <div class="small">Grown fresh in Kanjirappally. Scan the QR on your pack for the latest recipes.</div>
+  </div>
+</footer>
+
+  <script src="assets/script.js"></script>
+  <script>initRecipesPage();</script>
+</body>
+</html>

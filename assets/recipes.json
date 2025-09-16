@@ -12,7 +12,7 @@
     ],
     "time": "10 min",
     "serves": "1",
-    "image": "placeholder_radish.jpg",
+    "image": "radish.png",
     "ingredients": [
       "2 eggs",
       "1/2 cup TrueLau radish microgreens ",
@@ -40,7 +40,7 @@
     ],
     "time": "5 min",
     "serves": "1",
-    "image": "placeholder_pakchoi.jpg",
+    "image": "pakchoi.png",
     "ingredients": [
       "1 banana (ripe)",
       "1/2 cup TrueLau pak choi microgreens ",
@@ -67,7 +67,7 @@
     ],
     "time": "12 min",
     "serves": "2",
-    "image": "placeholder_beetroot.jpg",
+    "image": "beetroot",
     "ingredients": [
       "2 cups cucumber & tomato chunks",
       "1 cup TrueLau beetroot microgreens ",
@@ -94,7 +94,7 @@
     ],
     "time": "7 min",
     "serves": "1",
-    "image": "placeholder_amaranth.jpg",
+    "image": "amaranth.png",
     "ingredients": [
       "1 cup thick curd (yogurt)",
       "1/2 cup TrueLau amaranth microgreens ",
@@ -119,7 +119,7 @@
     ],
     "time": "8 min",
     "serves": "1",
-    "image": "placeholder_mustard.jpg",
+    "image": "mustard.png",
     "ingredients": [
       "2 slices whole-grain bread",
       "1/2 cup TrueLau mustard microgreens ",
